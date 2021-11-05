@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px;
+}
+
+.granddiv {
+    border-radius: 25px;
+    background-color: rgb(78, 78, 78);
+}
+
+@media (max-width:480px) {
+    body {
+        padding: 8px;
+    }
+
+    .header {
+        padding: 5px;
+    }
+    .header__name {
+        margin: 5px;
+    }
+}

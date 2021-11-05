@@ -1,0 +1,10 @@
+@import './global.css';
+@import './header.css';
+@import './footer.css';
+
+.main {
+    padding: 20px 50px;
+}
+.main__content {
+    color: #fff;
+}

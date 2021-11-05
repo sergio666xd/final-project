@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="./assets/styles/main.css">
+	<script src="./assets/scripts/main.js"></script>
+	<title>Mi Curriculum</title>
+</head>
+<body>
+	<div class="granddiv">
+		<header class="header">
+			<h1 class="header__name">Sergio Muñoz Marín</h1>
+			<div class="header__buttons">
+				<a href="#about-me" id="aboutMe" class="header__button" onclick="aboutMe()">Sobre Mí</a>
+				<a href="#hola" id="hola" class="header__button" onclick="hola()">Habilidades</a>
+				<a href="#" id="" class="header__button">a</a>
+			</div>
+		</header>
+
+		<main class="main">
+			<div class="main__content">
+				<script>
+					$(document).ready(function () {
+						$('.main__content').load('./about-me.html');
+						$('#aboutMe').addClass('active');
+					});
+				</script>
+			</div>
+		</main>
+
+
+		<footer>
+
+		</footer>
+	</div>
+</body>
+</html>

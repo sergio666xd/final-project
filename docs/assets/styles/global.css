@@ -24,4 +24,11 @@ body {
     .header__name {
         margin: 5px;
     }
+    .main {
+        padding: 10px 50px;
+    }
+    iframe {
+        width: 100%;
+    }
+
 }

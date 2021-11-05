@@ -1,10 +1,32 @@
 @import './global.css';
 @import './header.css';
 @import './footer.css';
+@import './percentage.css';
 
 .main {
-    padding: 20px 50px;
+    padding: 20px 100px;
 }
 .main__content {
     color: #fff;
+    text-align: justify;
 }
+
+ul {
+    padding: 10px 0 0 20px;
+    list-style: square;
+}
+
+li div, li div div {
+    border-radius: 25px;
+}
+.languajes__progresbar {
+    margin-top: 5px;
+    width: 160px;
+    height: 5px;
+    background-color: #fff;
+}
+.languajes__progresbar div {
+    height: 5px;
+    background-color: #000;
+}
+

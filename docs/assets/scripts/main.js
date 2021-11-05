@@ -1,13 +1,27 @@
 function aboutMe() {
-    $('.main__content').load('./about-me.html');
+    $('.main__content').load('./pages/about-me.html');
     $('#aboutMe').addClass('active');
-    $('#hola').removeClass('active');
-    //$('.about-me').removeClass('active');
+    $('#habilities').removeClass('active');
+    $('#projects').removeClass('active');
 }
 
-function hola() {
-    $('.main__content').load('./habilities.html');
+function habilities() {
+    $('.main__content').load('./pages/habilities.html');
     $('#aboutMe').removeClass('active');
-    $('#hola').addClass('active');
-    //$('.about-me').removeClass('active');
+    $('#habilities').addClass('active');
+    $('#projects').removeClass('active');
+}
+function projects() {
+    $('.main__content').load('./pages/projects.html');
+    $('#aboutMe').removeClass('active');
+    $('#habilities').removeClass('active');
+    $('#projects').addClass('active');
+}
+
+const a=100;
+
+for (let i = 0; i < a.length; i++) {
+    console.log('.pi' + (i+1) + '{');
+    console.log(' ' + ' ' + ' ' + ' ' + 'width: ' + (i+1) + '%');
+    console.log('}');  
 }

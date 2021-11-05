@@ -15,17 +15,17 @@
 		<header class="header">
 			<h1 class="header__name">Sergio Muñoz Marín</h1>
 			<div class="header__buttons">
-				<a href="#about-me" id="aboutMe" class="header__button" onclick="aboutMe()">Sobre Mí</a>
-				<a href="#hola" id="hola" class="header__button" onclick="hola()">Habilidades</a>
-				<a href="#" id="" class="header__button">a</a>
-			</div>
+				<button id="aboutMe" class="header__button" onclick="aboutMe()">Sobre Mí</button>
+				<button id="habilities" class="header__button" onclick="habilities()">Habilidades</button>
+				<button id="projects" class="header__button" onclick="projects()">Proyectos</button>
+			</div>	
 		</header>
 
 		<main class="main">
 			<div class="main__content">
 				<script>
 					$(document).ready(function () {
-						$('.main__content').load('./about-me.html');
+						$('.main__content').load('./pages/about-me.html');
 						$('#aboutMe').addClass('active');
 					});
 				</script>

@@ -7,12 +7,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="./assets/styles/main.css">
+	<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg></script>
 	<script src="./assets/scripts/main.js"></script>
 	<title>Mi Curriculum</title>
 </head>
 <body>
 	<div class="granddiv">
 		<header class="header">
+			<figure class="header__image">
+				<img src="./assets/img/photo.jpg" alt="profile_picture">
+			</figure>
 			<h1 class="header__name">Sergio Muñoz Marín</h1>
 			<div class="header__buttons">
 				<button id="aboutMe" class="header__button" onclick="aboutMe()">Sobre Mí</button>
@@ -27,14 +31,29 @@
 					$(document).ready(function () {
 						$('.main__content').load('./pages/about-me.html');
 						$('#aboutMe').addClass('active');
+						var year = (new Date).getFullYear();
+						$("#year").text(year);
 					});
 				</script>
 			</div>
 		</main>
 
 
-		<footer>
-
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__contdiv contacts">
+					<h2>Contacto</h2>
+					<ul>
+						<li  class="contacts__link"><i class="fas fa-phone-alt"></i><a href="tel:+573008212386">300-8212386</a></li>
+						<li  class="contacts__link"><i class="fas fa-envelope"></i><a href="mailto:sergio.munoz@envigado.edu.co">sergio.munoz@envigado.edu.co</a></li>
+						<li  class="contacts__link"><i class="fab fa-github"></i><a href="https://github.com/sergio666xd" target="_blank">sergio666xd</a></li>
+					</ul>
+				</div>
+				<div class="footer__contdiv">
+					<h2>Otra cosa</h2>
+				</div>
+			</div>
+			<p class="copy">Copyright &copy; <span id="year"></span> - Sergio Muñoz Marín</p>
 		</footer>
 	</div>
 </body>

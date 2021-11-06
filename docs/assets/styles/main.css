@@ -5,32 +5,66 @@
 
 .main {
     padding: 20px 100px;
+    transition: all 1s ease-out;
 }
 .main__content {
     color: #fff;
     text-align: justify;
 }
+.main__link {
+    color: black;
+}
 
-ul {
+.main h1,.main h2,.main h3,.main h4,.main h5,.main h6 {
+    text-align: left;
+}
+
+section ul {
     padding: 10px 0 0 20px;
     list-style: square;
 }
 
-li div, li div div {
+/*BARRAS DE PROGRESO*/
+/*________________________________*/
+.progresbar, .progresbar div {
     border-radius: 25px;
 }
-.languajes__progresbar {
-    margin-top: 5px;
+.progresbar {
+    margin: 5px 0 10px 0;
     width: 160px;
     height: 5px;
     background-color: #fff;
 }
-.languajes__progresbar div {
+.progresbar div {
     height: 5px;
+}
+.spa, .eng {
     background-color: #000;
 }
-
-iframe {
-    width: 80%;
+div.html {
+    background-color: rgb(219, 80, 0);
 }
+div.css {
+    background-color: rgb(82, 179, 240);
+}
+div.js {
+    background-color: rgb(255, 238, 0);
+}
+/*________________________________*/
 
+/*ÍCONOS*/
+/*________________________________*/
+h4.js, h4.css, h4.html {
+    display: inline-block;
+    margin-left: 5px;
+}
+.colorhtml {
+    color: rgb(219, 80, 0);
+}
+.colorcss {
+    color: rgb(82, 179, 240);
+}
+.colorjs {
+    color: rgb(255, 238, 0);
+}
+/*________________________________*/

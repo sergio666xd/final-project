@@ -1,16 +1,22 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     padding: 20px;
+    color: #fff;
 }
 
 .granddiv {
     border-radius: 25px;
     background-color: rgb(78, 78, 78);
+}
+
+i {
+    display: inline-block;
 }
 
 @media (max-width:480px) {
@@ -27,8 +33,19 @@ body {
     .main {
         padding: 10px 50px;
     }
-    iframe {
-        width: 100%;
+    ul {
+        padding: 6px 0 0 15px;
+        list-style: square;
+    }
+    .footer {
+        padding: 5px;
+    }
+    .footer__container {
+        grid-template-columns: none !important;
+        padding: 5px;
+    }
+    .footer__contdiv {
+        margin: 5px 20px;
     }
 
 }

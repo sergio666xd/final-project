@@ -31,7 +31,7 @@ i {
         margin: 5px;
     }
     .main {
-        padding: 10px 50px;
+        padding: 10px 10px !important;
     }
     ul {
         padding: 6px 0 0 15px;
@@ -46,6 +46,13 @@ i {
     }
     .footer__contdiv {
         margin: 5px 20px;
+    }
+    .other1 {
+        display: none;
+    }
+    .other2 {
+        border-top: 1px solid #fff;
+        padding-top: 20px;
     }
 
 }

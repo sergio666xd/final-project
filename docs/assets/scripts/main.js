@@ -17,11 +17,3 @@ function projects() {
     $('#habilities').removeClass('active');
     $('#projects').addClass('active');
 }
-
-const a=100;
-
-for (let i = 0; i < a.length; i++) {
-    console.log('.pi' + (i+1) + '{');
-    console.log(' ' + ' ' + ' ' + ' ' + 'width: ' + (i+1) + '%');
-    console.log('}');  
-}

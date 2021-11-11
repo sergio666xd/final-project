@@ -18,15 +18,18 @@
 				<img src="./assets/img/photo.jpg" alt="profile_picture">
 			</figure>
 			<h1 class="header__name">Sergio Muñoz Marín</h1>
-			<div class="header__buttons">
+			<nav class="header__buttons">
 				<button id="aboutMe" class="header__button" onclick="aboutMe()">Sobre Mí</button>
 				<button id="habilities" class="header__button" onclick="habilities()">Habilidades</button>
 				<button id="projects" class="header__button" onclick="projects()">Proyectos</button>
-			</div>	
+			</nav>
+			<div class="cstt">
+				<button id="settings" class="settings" onclick="settings()"><i class="fas fa-cog"></i></button>
+			</div>
 		</header>
 
 		<main class="main">
-			<div class="main__content">
+			<div id="content" class="main__content">
 				<script>
 					$(document).ready(function () {
 						$('.main__content').load('./pages/about-me.html');
@@ -37,7 +40,6 @@
 				</script>
 			</div>
 		</main>
-
 
 		<footer class="footer">
 			<div class="footer__container">

@@ -4,8 +4,9 @@
 @import './percentage.css';
 
 .main {
+    display: flex;
     padding: 20px 100px;
-    transition: all 1s ease-out;
+    transition: all cubic-bezier(0.95, 0.05, 0.795, 0.035) ease-in-out !important;
 }
 .main__content {
     color: #fff;
@@ -68,3 +69,19 @@ h4.js, h4.css, h4.html {
     color: rgb(255, 238, 0);
 }
 /*________________________________*/
+
+.wait {
+    padding: 5px !important;
+    color: rgb(78, 78, 78) !important;
+}
+.normal {
+    padding: 10px 100px;
+    color: #fff !important;
+
+}
+.waitc {
+    display: none !important;
+}
+.normalc {
+    display: block;
+}

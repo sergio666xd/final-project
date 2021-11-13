@@ -57,4 +57,4 @@ function projects() {
         $('#content').removeClass('waitc');
         $('#content').addClass('normalc');
     }, 500);
-}
+} 

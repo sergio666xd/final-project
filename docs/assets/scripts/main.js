@@ -1,13 +1,7 @@
-let settings = document.querySelector("#settings");
-let viewvar = document.querySelector("#cstt__settings");
-
 $(function () {
 	$("nav").delegate("button", "click", function() {
 			window.location.hash = $(this).attr("id");
 			return false;
-	});
-	settings.addEventListener("click",() => {
-		viewvar.classList.toggle("cstt__settings--view");
 	});
 });
 

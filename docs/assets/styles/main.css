@@ -29,29 +29,46 @@ section ul {
 /*________________________________*/
 .progresbar, .progresbar div {
     border-radius: 25px;
+    height: 10px;
 }
 .progresbar {
     margin: 5px 0 10px 0;
     width: 160px;
-    height: 5px;
     background-color: #fff;
 }
-.progresbar div {
-    height: 5px;
-}
+
+
+/*ABME*/
 .spa, .eng {
     background-color: #000;
 }
+.spa {
+    animation-duration: 1.5s;
+    animation-name: spa;
+}
+.eng {
+    animation-duration: 1.5s;
+    animation-name: eng;
+}
+
+/*HABS*/
 div.html {
     background-color: rgb(219, 80, 0);
+    animation-duration: 1.5s;
+    animation-name: html;
 }
 div.css {
     background-color: rgb(82, 179, 240);
+    animation-duration: 1.5s;
+    animation-name: css;
 }
 div.js {
     background-color: rgb(255, 238, 0);
+    animation-duration: 1.5s;
+    animation-name: js;
 }
 /*________________________________*/
+
 
 /*ÍCONOS*/
 /*________________________________*/
@@ -70,6 +87,10 @@ h4.js, h4.css, h4.html {
 }
 /*________________________________*/
 
+
+/*TRANSICIÓN*/
+/*________________________________*/
+
 .wait {
     padding: 5px !important;
     color: rgb(78, 78, 78) !important;
@@ -85,3 +106,58 @@ h4.js, h4.css, h4.html {
 .normalc {
     display: block;
 }
+/*________________________________*/
+
+
+/*ANIMACIÓN PÁGINA ABOUT ME*/
+/*________________________________*/
+@keyframes spa {
+    from {
+        width: 0%;
+    }
+    
+    to {
+        width: 100%;
+    }
+}
+@keyframes eng {
+    from {
+        width: 0%;
+    }
+    
+    to {
+        width: 70%;
+    }
+}
+/*________________________________*/
+
+/*ANIMACIÓN PÁGINA HABILITIES*/
+/*________________________________*/
+@keyframes html {
+    from {
+        width: 0%;
+    }
+    
+    to {
+        width: 100%;
+    }
+}
+@keyframes css {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 86%;
+    }
+}
+@keyframes js {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 60%;
+    }
+}
+/*________________________________*/

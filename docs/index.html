@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="./assets/styles/main.css">
-	<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg></script>
-	<script src="./assets/scripts/main.js"></script>
-	<title>Mi Curriculum</title>
-</head>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+		<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg></script>
+		<link rel="stylesheet" href="./assets/styles/main.css">
+		<title>Mi Curriculum</title>
+	</head>
 <body>
 	<div class="granddiv">
 		<header class="header">
@@ -23,27 +22,25 @@
 				<button id="habilities" class="header__button" onclick="habilities()">Habilidades</button>
 				<button id="projects" class="header__button" onclick="projects()">Proyectos</button>
 			</nav>
-			<div class="cstt">
-				<button id="settings" class="settings" onclick="settings()"><i class="fas fa-cog"></i></button>
-			</div>
 		</header>
-
+		
 		<main class="main">
 			<div id="content" class="main__content">
 				<script>
 					$(document).ready(function () {
 						$('.main__content').load('./pages/about-me.html');
-						$('#aboutMe').addClass('active');
+						let abMe = document.querySelector("#aboutMe");
+						abMe.classList.add("header__button--active");
 						var year = (new Date).getFullYear();
 						$("#year").text(year);
 					});
 				</script>
 			</div>
 		</main>
-
+		
 		<footer class="footer">
 			<div class="footer__container">
-				<div class="footer__contdiv contacts">
+				<div class="footer__contdiv footer__contdiv-contacts">
 					<h2>Contacto</h2>
 					<ul>
 						<li  class="contacts__link"><i class="fas fa-phone-alt"></i><a href="tel:+573008212386">300-8212386</a></li>
@@ -52,15 +49,20 @@
 					</ul>
 				</div>
 				<div class="other1"></div>
-				<div class="footer__contdiv other2">
-					<h2>Otra cosa</h2>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt aut enim facilis, dolore, veritatis rem perferendis hic modi temporibus molestiae delectus? Incidunt laborum repudiandae dolorem doloribus ipsa. Cupiditate, a adipisci.
-					</p>
+				<div class="footer__contdiv footer__contdiv-info other2">
+					<h2>Otra información</h2>
+					<ul>
+						<li><b>Residencia: </b>San Antonio de Prado - Medellín, Antióquia</li>
+						<li><b>Proyecto final - programa Jóvenes creaTIvos</b></li>
+						<figure class="footer__contdiv-info__image">
+							<img src="./assets/img/jc_logo.png" alt="Logo Jóvenes creaTIvos">
+						</figure>
+					</ul>
 				</div>
 			</div>
 			<p class="copy">Copyright &copy; <span id="year"></span> - Sergio Muñoz Marín</p>
 		</footer>
 	</div>
+	<script src="./assets/scripts/main.js"></script>
 </body>
 </html>

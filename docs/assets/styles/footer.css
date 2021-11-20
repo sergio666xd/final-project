@@ -3,6 +3,8 @@
 	padding: 10px;
 	border-radius: 0 0 25px 25px;
     text-align: center;
+    align-content: center;
+    justify-content: center;
 }
 .footer__container {
     display: grid;
@@ -10,9 +12,9 @@
     padding: 10px;
 }
 .footer__contdiv {
-    margin: 5px 20px;
+    margin: auto 20px;
 }
-.contacts ul {
+.footer__contdiv-contacts ul {
     list-style: none;
     padding: 5px;
 }
@@ -28,6 +30,23 @@
         border-left: 1px solid #fff;
         width: 0px;
         margin: 0 auto;
+}
+.footer__contdiv-info ul {
+    list-style: none;
+    padding: 5px;
+}
+.footer__contdiv-info ul li {
+    padding: 5px;
+}
+.footer__contdiv-info__image {
+	width: 100px;
+	height: 100px;
+	padding: 2px;
+    margin: 0 auto;
+}
+.footer__contdiv-info__image img {
+	width: 100%;
+	height: 100%;
 }
 .copy {
     border-top: 1px solid #fff;

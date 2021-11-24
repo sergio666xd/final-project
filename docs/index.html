@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
-		<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg></script>
-		<link rel="stylesheet" href="./assets/styles/main.css">
-		<title>Mi Curriculum</title>
-	</head>
+
+<head>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+	<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg></script>
+	<link rel="stylesheet" href="./assets/styles/main.css">
+	<title>Mi Curriculum</title>
+</head>
+
 <body>
 	<div class="granddiv">
 		<header class="header">
@@ -23,29 +25,40 @@
 				<button id="projects" class="header__button" onclick="projects()">Proyectos</button>
 			</nav>
 		</header>
-		
+
 		<main class="main">
 			<div id="content" class="main__content">
 				<script>
 					$(document).ready(function () {
-						$('.main__content').load('./pages/about-me.html');
-						let abMe = document.querySelector("#aboutMe");
-						abMe.classList.add("header__button--active");
 						var year = (new Date).getFullYear();
 						$("#year").text(year);
+						var URLhash = window.location.hash;
+						if (URLhash == "#aboutMe") {
+							aboutMe()
+							console.log("Página actual: Sobre mí");
+						} else if (URLhash == "#habilities") {
+							habilities()
+							console.log("Página actual: Habilidades");
+						} else if (URLhash == "#projects") {
+							projects()
+							console.log("Página actual: Proyectos");
+						}
 					});
 				</script>
 			</div>
 		</main>
-		
+
 		<footer class="footer">
 			<div class="footer__container">
 				<div class="footer__contdiv footer__contdiv-contacts">
 					<h2>Contacto</h2>
 					<ul>
-						<li  class="contacts__link"><i class="fas fa-phone-alt"></i><a href="tel:+573008212386">300-8212386</a></li>
-						<li  class="contacts__link"><i class="fas fa-envelope"></i><a href="mailto:sergio.munoz@envigado.edu.co">Correo</a></li>
-						<li  class="contacts__link"><i class="fab fa-github"></i><a href="https://github.com/sergio666xd" target="_blank">sergio666xd</a></li>
+						<li class="contacts__link"><i class="fas fa-phone-alt"></i><a
+								href="tel:+573008212386">300-8212386</a></li>
+						<li class="contacts__link"><i class="fas fa-envelope"></i><a
+								href="mailto:sergio.munoz@envigado.edu.co">Correo</a></li>
+						<li class="contacts__link"><i class="fab fa-github"></i><a href="https://github.com/sergio666xd"
+								target="_blank">sergio666xd</a></li>
 					</ul>
 				</div>
 				<div class="other1"></div>
@@ -65,4 +78,5 @@
 	</div>
 	<script src="./assets/scripts/main.js"></script>
 </body>
+
 </html>

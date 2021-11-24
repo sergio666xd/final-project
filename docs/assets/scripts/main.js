@@ -1,7 +1,23 @@
 $(function () {
-	$("nav").delegate("button", "click", function() {
-			window.location.hash = $(this).attr("id");
-			return false;
+	$("nav").delegate("button", "click", function () {
+		window.location.hash = $(this).attr("id");
+		return false;
+	});
+	if("onhashchange" in window){
+		console.log("soportado")
+	 }
+	 $(window).bind("hashchange", function () {
+		var URLhash = window.location.hash;
+		if (URLhash == "#aboutMe") {
+			aboutMe()
+			console.log("Página actual: Sobre mí");
+		} else if (URLhash == "#habilities") {
+			habilities()
+			console.log("Página actual: Habilidades");
+		} else if (URLhash == "#projects") {
+			projects()
+			console.log("Página actual: Proyectos");
+		}
 	});
 });
 
@@ -11,9 +27,17 @@ let proj = document.querySelector("#projects");
 let main = document.querySelector(".main");
 let cont = document.querySelector("#content");
 
-function aboutMe() {
+function addWait() {
 	main.classList.add("wait");
 	cont.classList.add("waitc");
+}
+function removeWait() {
+	main.classList.remove("wait");
+	cont.classList.remove("waitc");
+}
+
+function aboutMe() {
+	addWait();
 	$('.main__content').load('./pages/about-me.html');
 	setTimeout(function () {
 		abMe.classList.add("header__button--active");
@@ -21,13 +45,11 @@ function aboutMe() {
 		proj.classList.remove("header__button--active");
 	}, 100);
 	setTimeout(function () {
-		main.classList.remove("wait");
-		cont.classList.remove("waitc");
+		removeWait();
 	}, 500);
 }
 function habilities() {
-	main.classList.add("wait");
-	cont.classList.add("waitc");
+	addWait();
 	$('.main__content').load('./pages/habilities.html');
 	setTimeout(function () {
 		abMe.classList.remove("header__button--active");
@@ -35,13 +57,11 @@ function habilities() {
 		proj.classList.remove("header__button--active");
 	}, 100);
 	setTimeout(function () {
-		main.classList.remove("wait");
-		cont.classList.remove("waitc");
+		removeWait();
 	}, 500);
 }
 function projects() {
-	main.classList.add("wait");
-	cont.classList.add("waitc");
+	addWait();
 	$('.main__content').load('./pages/projects.html');
 	setTimeout(function () {
 		abMe.classList.remove("header__button--active");
@@ -49,7 +69,6 @@ function projects() {
 		proj.classList.add("header__button--active");
 	}, 100);
 	setTimeout(function () {
-		main.classList.remove("wait");
-		cont.classList.remove("waitc");
+		removeWait();
 	}, 500);
-} 
+}

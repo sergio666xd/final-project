@@ -10,6 +10,11 @@
 	<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg></script>
 	<link rel="stylesheet" href="./assets/styles/main.css">
 	<title>Mi Curriculum</title>
+	<script>
+		if ("onhashchange" in window) {
+			console.log("hashchange soportado. Podrás acceder a una página a través de un enlace. (Ejemplo: https://sergio666xd.github.io/final-project/"+ window.location.hash +")")
+		}
+	</script>
 </head>
 
 <body>
@@ -33,15 +38,12 @@
 						var year = (new Date).getFullYear();
 						$("#year").text(year);
 						var URLhash = window.location.hash;
-						if (URLhash == "#aboutMe") {
+						if (URLhash == "#aboutMe" || URLhash == "") {
 							aboutMe()
-							console.log("Página actual: Sobre mí");
 						} else if (URLhash == "#habilities") {
 							habilities()
-							console.log("Página actual: Habilidades");
 						} else if (URLhash == "#projects") {
 							projects()
-							console.log("Página actual: Proyectos");
 						}
 					});
 				</script>

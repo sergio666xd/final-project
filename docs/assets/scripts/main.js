@@ -3,20 +3,16 @@ $(function () {
 		window.location.hash = $(this).attr("id");
 		return false;
 	});
-	if("onhashchange" in window){
-		console.log("soportado")
-	 }
 	 $(window).bind("hashchange", function () {
 		var URLhash = window.location.hash;
 		if (URLhash == "#aboutMe") {
 			aboutMe()
-			console.log("Página actual: Sobre mí");
 		} else if (URLhash == "#habilities") {
 			habilities()
-			console.log("Página actual: Habilidades");
 		} else if (URLhash == "#projects") {
 			projects()
-			console.log("Página actual: Proyectos");
+		} else {
+			error404()
 		}
 	});
 });
@@ -27,6 +23,35 @@ let proj = document.querySelector("#projects");
 let main = document.querySelector(".main");
 let cont = document.querySelector("#content");
 
+function page() {
+	setTimeout(() => {
+		let title = $("#title").text();
+		console.log("Página actual: " + title);
+	}, 500);
+}
+
+function buttons() {
+	var URLhash = window.location.hash;
+	if (URLhash == "#aboutMe" || URLhash == "") {
+		abMe.classList.add("header__button--active");
+		habs.classList.remove("header__button--active");
+		proj.classList.remove("header__button--active");
+	} else if (URLhash == "#habilities") {
+		abMe.classList.remove("header__button--active");
+		habs.classList.add("header__button--active");
+		proj.classList.remove("header__button--active");
+	} else if (URLhash == "#projects") {
+		abMe.classList.remove("header__button--active");
+		habs.classList.remove("header__button--active");
+		proj.classList.add("header__button--active");
+	} else {
+		abMe.classList.remove("header__button--active");
+		habs.classList.remove("header__button--active");
+		proj.classList.remove("header__button--active");
+	}
+	page()
+}
+
 function addWait() {
 	main.classList.add("wait");
 	cont.classList.add("waitc");
@@ -36,13 +61,22 @@ function removeWait() {
 	cont.classList.remove("waitc");
 }
 
+function error404() {
+	addWait();
+	$('.main__content').load('./pages/error404.html');
+	setTimeout(function () {
+		buttons()
+	}, 100);
+	setTimeout(function () {
+		removeWait();
+	}, 500);
+}
+
 function aboutMe() {
 	addWait();
 	$('.main__content').load('./pages/about-me.html');
 	setTimeout(function () {
-		abMe.classList.add("header__button--active");
-		habs.classList.remove("header__button--active");
-		proj.classList.remove("header__button--active");
+		buttons()
 	}, 100);
 	setTimeout(function () {
 		removeWait();
@@ -52,9 +86,7 @@ function habilities() {
 	addWait();
 	$('.main__content').load('./pages/habilities.html');
 	setTimeout(function () {
-		abMe.classList.remove("header__button--active");
-		habs.classList.add("header__button--active");
-		proj.classList.remove("header__button--active");
+		buttons()
 	}, 100);
 	setTimeout(function () {
 		removeWait();
@@ -64,9 +96,7 @@ function projects() {
 	addWait();
 	$('.main__content').load('./pages/projects.html');
 	setTimeout(function () {
-		abMe.classList.remove("header__button--active");
-		habs.classList.remove("header__button--active");
-		proj.classList.add("header__button--active");
+		buttons()
 	}, 100);
 	setTimeout(function () {
 		removeWait();

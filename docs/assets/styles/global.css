@@ -32,16 +32,16 @@ i {
     .header__name {
         margin: 5px;
     }
+
     .main {
         padding: 20px !important;
     }
-    .normal {
-        padding: 20px;
-    }
+
     ul {
         padding: 6px 0 0 15px;
         list-style: square;
     }
+    
     .footer {
         padding: 5px;
     }
@@ -57,7 +57,7 @@ i {
     }
     .other2 {
         border-top: 1px solid #fff;
-        padding-top: 20px;
+        padding-top: 15px;
     }
 
 }

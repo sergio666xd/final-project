@@ -95,16 +95,8 @@ h4.js, h4.css, h4.html {
     padding: 5px !important;
     color: rgb(78, 78, 78) !important;
 }
-.normal {
-    padding: 10px 100px;
-    color: #fff !important;
-
-}
 .waitc {
     display: none !important;
-}
-.normalc {
-    display: block;
 }
 /*________________________________*/
 

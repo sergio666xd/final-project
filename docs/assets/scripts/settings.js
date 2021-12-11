@@ -36,7 +36,7 @@ btnSwitch2.addEventListener("click", () => {
 	btnSwitch2.classList.toggle("settings__menu-switch--enabled");
 	header.classList.toggle("dark-text");
 	if (light==false) {
-		main.classList.toggle("dark-text");
+		granddiv.classList.toggle("dark-text");
 	}
 	footer.classList.toggle("dark-text");
 });

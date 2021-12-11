@@ -190,6 +190,9 @@ nav .light-header {
 	color: #000;
 }
 
+.light.dark-text {
+	color: #000 !important;
+}
 .dark-text {
 	color: rgba(255, 255, 255, 0.344) !important;
 }
@@ -204,9 +207,6 @@ nav .light-header {
 }
 .dark-text .footer__container, .dark-text .copy, .dark-text .footer__container div ul li a {
 	color: rgba(255, 255, 255, 0.344) !important;
-}
-.light.dark-text {
-	color: #000 !important;
 }
 
 @keyframes buttons {

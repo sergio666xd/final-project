@@ -11,6 +11,8 @@ const btnh = document.querySelector("#habilities");
 const btnp = document.querySelector("#projects");
 let light = false;
 
+const btnSwitch2 = document.querySelector("#settings__menu-switch2");
+
 os.addEventListener("click", () => {
 	menu.classList.add("show-settings-menu");
 });
@@ -29,4 +31,12 @@ btnSwitch1.addEventListener("click", () => {
 	btnp.classList.toggle("light-button");
 	menu.classList.toggle("light-menu");
 	light = btnSwitch1.classList.contains("settings__menu-switch--enabled");
+});
+btnSwitch2.addEventListener("click", () => {
+	btnSwitch2.classList.toggle("settings__menu-switch--enabled");
+	header.classList.toggle("dark-text");
+	if (light==false) {
+		main.classList.toggle("dark-text");
+	}
+	footer.classList.toggle("dark-text");
 });

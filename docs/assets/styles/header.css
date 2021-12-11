@@ -203,10 +203,14 @@ nav .light-header {
 .dark-text .header__name {
 	color: rgba(255, 255, 255, 0.344) !important;
 }
-.light-footer.dark-text .footer__container, .dark-text .copy, .light-footer.dark-text .footer__container div ul li a {
+.light-footer.dark-text .footer__container,
+.light-footer.dark-text .copy,
+.light-footer.dark-text .footer__container div ul li a {
 	color: #000 !important;
 }
-.dark-text .footer__container, .dark-text .copy, .dark-text .footer__container div ul li a {
+.dark-text .footer__container,
+.dark-text .copy,
+.dark-text .footer__container div ul li a {
 	color: rgba(255, 255, 255, 0.344) !important;
 }
 

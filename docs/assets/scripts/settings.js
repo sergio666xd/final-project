@@ -34,9 +34,17 @@ btnSwitch1.addEventListener("click", () => {
 });
 btnSwitch2.addEventListener("click", () => {
 	btnSwitch2.classList.toggle("settings__menu-switch--enabled");
-	header.classList.toggle("dark-text");
-	if (light==false) {
-		granddiv.classList.toggle("dark-text");
+	if (btnSwitch2.classList.contains("settings__menu-switch--enabled")) {
+		header.classList.add("dark-text");
+		if (light==false) {
+			granddiv.classList.add("dark-text");
+		} else {
+			granddiv.classList.remove("dark-text");
+		}
+		footer.classList.add("dark-text");
+	} else {
+		header.classList.remove("dark-text");
+		granddiv.classList.remove("dark-text");
+		footer.classList.remove("dark-text");
 	}
-	footer.classList.toggle("dark-text");
 });

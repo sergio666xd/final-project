@@ -25,10 +25,40 @@
 			</figure>
 			<h1 class="header__name">Sergio Muñoz Marín</h1>
 			<nav class="header__buttons">
-				<button id="aboutMe" class="header__button" onclick="aboutMe()">Sobre Mí</button>
-				<button id="habilities" class="header__button" onclick="habilities()">Habilidades</button>
-				<button id="projects" class="header__button" onclick="projects()">Proyectos</button>
+				<button id="aboutMe" class="header__button">Sobre Mí</button>
+				<button id="habilities" class="header__button">Habilidades</button>
+				<button id="projects" class="header__button">Proyectos</button>
 			</nav>
+			<div class="settings">
+				<div class="settings__icon">
+					<div class="settings__icon-open container-icon" id="openSettings">
+						<i class="fas fa-cog"></i>
+					</div>
+				</div>
+				<div class="settings__menu" id="settings__menu">
+					<div class="settings__icon-inside">
+						<div class="settings__icon-close settings__icon-open--disabled container-icon" id="closeSettings">
+							<i class="fas fa-times"></i>
+						</div>
+					</div>
+					<h3>Configuración</h3>
+					<br>
+					<ul class="settings__menu-items">
+						<li class="settings__menu-item">
+							<button class="settings__menu-switch" id="settings__menu-switch1">
+								<span class="sun"><i class="fas fa-sun"></i></span>
+								<span class="moon"><i class="fas fa-moon"></i></span>
+							</button><p> Modo claro</p>
+						</li>
+						<li class="settings__menu-item">
+							<button class="settings__menu-switch" id="settings__menu-switch2">
+								<span><i class="fas fa-sun"></i></span>
+								<span><i class="fas fa-moon"></i></span>
+							</button><p> Comming soon...</p>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</header>
 
 		<main class="main">
@@ -79,6 +109,7 @@
 		</footer>
 	</div>
 	<script src="./assets/scripts/main.js"></script>
+	<script src="./assets/scripts/settings.js"></script>
 </body>
 
 </html>

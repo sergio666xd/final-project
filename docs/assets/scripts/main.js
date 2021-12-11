@@ -1,9 +1,17 @@
 $(function () {
 	$("nav").delegate("button", "click", function () {
 		window.location.hash = $(this).attr("id");
-		return false;
+		var URLhash = window.location.hash;
+		if (URLhash == "#aboutMe" || URLhash == "") {
+			aboutMe()
+		} else if (URLhash == "#habilities") {
+			habilities()
+		} else if (URLhash == "#projects") {
+			projects()
+		}
 	});
-	 $(window).bind("hashchange", function () {
+
+	$(window).bind("hashchange", function () {
 		var URLhash = window.location.hash;
 		if (URLhash == "#aboutMe") {
 			aboutMe()

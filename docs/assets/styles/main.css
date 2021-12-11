@@ -6,10 +6,9 @@
 .main {
     display: flex;
     padding: 20px 100px;
-    transition: all cubic-bezier(0.95, 0.05, 0.795, 0.035) ease-in-out !important;
+    transition: all 0.3s ease-in-out !important;
 }
 .main__content {
-    color: #fff;
     text-align: justify;
 }
 .main__link {

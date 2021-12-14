@@ -1,7 +1,24 @@
+if ("onhashchange" in window) {
+	console.log("hashchange soportado. Podrás acceder a una página a través de un enlace. (Ejemplo: " + window.location +")")
+}
+
+$(document).ready(function () {
+	var year = (new Date).getFullYear();
+	$("#year").text(year);
+	var URLhash = window.location.hash;
+	if (URLhash == "#aboutMe" || URLhash == "") {
+		aboutMe()
+	} else if (URLhash == "#habilities") {
+		habilities()
+	} else if (URLhash == "#projects") {
+		projects()
+	}
+	const progress = document.querySelector(".progresbar");
+});
+
 $(function () {
 	$("nav").delegate("button", "click", function () {
-		window.location.hash = $(this).attr("id");
-		var URLhash = window.location.hash;
+		var URLhash = $(this).attr("id");;
 		if (URLhash == "#aboutMe" || URLhash == "") {
 			aboutMe()
 		} else if (URLhash == "#habilities") {
@@ -9,6 +26,9 @@ $(function () {
 		} else if (URLhash == "#projects") {
 			projects()
 		}
+		setTimeout(() => {
+			window.location.hash = $(this).attr("id");
+		}, 100);
 	});
 
 	$(window).bind("hashchange", function () {
@@ -67,6 +87,9 @@ function addWait() {
 function removeWait() {
 	main.classList.remove("wait");
 	cont.classList.remove("waitc");
+	setTimeout(() => {
+		progresbar()
+	}, 500);
 }
 
 function error404() {

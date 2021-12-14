@@ -9,15 +9,40 @@
 	<link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
 	<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg></script>
 	<link rel="stylesheet" href="./assets/styles/main.css">
-	<title>Mi Curriculum</title>
-	<script>
-		if ("onhashchange" in window) {
-			console.log("hashchange soportado. Podrás acceder a una página a través de un enlace. (Ejemplo: https://sergio666xd.github.io/final-project/"+ window.location.hash +")")
-		}
-	</script>
+	<title>Mi Curriculum</title>	
 </head>
 
 <body>
+	<div class="settings">
+		<div class="settings__icon">
+			<div class="settings__icon-open container-icon" id="openSettings">
+				<i class="fas fa-cog"></i>
+			</div>
+		</div>
+		<div class="settings__menu" id="settings__menu">
+			<div class="settings__icon-inside">
+				<div class="settings__icon-close settings__icon-open--disabled container-icon" id="closeSettings">
+					<i class="fas fa-times"></i>
+				</div>
+			</div>
+			<h3>Configuración</h3>
+			<br>
+			<ul class="settings__menu-items">
+				<li class="settings__menu-item">
+					<button class="settings__menu-switch" id="settings__menu-switch1">
+						<span class="sun"><i class="fas fa-sun"></i></span>
+						<span class="moon"><i class="fas fa-moon"></i></span>
+					</button><p> Modo claro</p>
+				</li>
+				<li class="settings__menu-item">
+					<button class="settings__menu-switch" id="settings__menu-switch2">
+						<span><i class="fas fa-check"></i></span>
+						<span><i class="fas fa-times"></i></span>
+					</button><p> Texto oscuro</p>
+				</li>
+			</ul>
+		</div>
+	</div>
 	<div class="granddiv">
 		<header class="header">
 			<figure class="header__image">
@@ -29,54 +54,10 @@
 				<button id="habilities" class="header__button">Habilidades</button>
 				<button id="projects" class="header__button">Proyectos</button>
 			</nav>
-			<div class="settings">
-				<div class="settings__icon">
-					<div class="settings__icon-open container-icon" id="openSettings">
-						<i class="fas fa-cog"></i>
-					</div>
-				</div>
-				<div class="settings__menu" id="settings__menu">
-					<div class="settings__icon-inside">
-						<div class="settings__icon-close settings__icon-open--disabled container-icon" id="closeSettings">
-							<i class="fas fa-times"></i>
-						</div>
-					</div>
-					<h3>Configuración</h3>
-					<br>
-					<ul class="settings__menu-items">
-						<li class="settings__menu-item">
-							<button class="settings__menu-switch" id="settings__menu-switch1">
-								<span class="sun"><i class="fas fa-sun"></i></span>
-								<span class="moon"><i class="fas fa-moon"></i></span>
-							</button><p> Modo claro</p>
-						</li>
-						<li class="settings__menu-item">
-							<button class="settings__menu-switch" id="settings__menu-switch2">
-								<span><i class="fas fa-check"></i></span>
-								<span><i class="fas fa-times"></i></span>
-							</button><p> Texto oscuro</p>
-						</li>
-					</ul>
-				</div>
-			</div>
 		</header>
 
 		<main class="main">
 			<div id="content" class="main__content">
-				<script>
-					$(document).ready(function () {
-						var year = (new Date).getFullYear();
-						$("#year").text(year);
-						var URLhash = window.location.hash;
-						if (URLhash == "#aboutMe" || URLhash == "") {
-							aboutMe()
-						} else if (URLhash == "#habilities") {
-							habilities()
-						} else if (URLhash == "#projects") {
-							projects()
-						}
-					});
-				</script>
 			</div>
 		</main>
 

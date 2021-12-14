@@ -66,6 +66,11 @@ div.js {
     animation-duration: 1.5s;
     animation-name: js;
 }
+
+.light-progress {
+    height: 12px;
+    border: 1px solid #000;
+}
 /*________________________________*/
 
 
@@ -91,7 +96,7 @@ h4.js, h4.css, h4.html {
 /*________________________________*/
 
 .wait {
-    padding: 5px !important;
+    padding: 0 !important;
     color: rgb(78, 78, 78) !important;
 }
 .waitc {
